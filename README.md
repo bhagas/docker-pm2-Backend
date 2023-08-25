@@ -18,10 +18,11 @@ docker run -d -t -i -v /path/ke/asset:/asset -p 5000:5000 --name nama_container 
 
 untuk updating:
 ```
-docker cp ./.env nama_container:/
-docker cp ./src nama_container:/
-docker cp ./package.json nama_container:/
-docker exec -it nama_container npm install
+git pull origin main &&
+docker cp ./.env nama_container:/ &&
+docker cp ./src nama_container:/ &&
+docker cp ./package.json nama_container:/ &&
+docker exec -it nama_container npm install &&
 docker exec -it nama_container pm2 reload all
 ```
 
