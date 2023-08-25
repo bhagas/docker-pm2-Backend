@@ -6,11 +6,11 @@ Build Image:
 ```
 docker build -t nama_aplikasi .
 ```
-Jalankan container:
+Jalankan container dengan menggunakan environment database:
 ```
 docker run -d -t -i -v /path/ke/asset:/asset -e DB_HOST='172.17.0.2' -e DB_USER='root' -e DB_PASSWORD='password' -e DB_NAME='nama_db' -e DB_PORT=3306 -p 5000:5000 --name nama_container nama_aplikasi
 ```
-atau
+atau tanpa environment
 ```
 docker run -d -t -i -v /path/ke/asset:/asset -p 5000:5000 --name nama_container nama_aplikasi
 ```
