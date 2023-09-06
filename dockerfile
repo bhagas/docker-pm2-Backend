@@ -7,7 +7,6 @@ COPY ecosystem.config.js .
 COPY .env .
 
 # Install app dependencies
-RUN npm install -g npm
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm install --production
 
