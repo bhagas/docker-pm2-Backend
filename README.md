@@ -28,11 +28,12 @@ docker exec -it nama_container pm2 reload all
 
 untuk Jenkins:
 ```
+cd /path/ke/directory; git pull origin main
 cd /path/ke/directory; docker cp ./.env nama_container:/
 cd /path/ke/directory; docker cp ./src nama_container:/
 cd /path/ke/directory; docker cp ./package.json nama_container:/
-cd /path/ke/directory; docker exec -it nama_container npm install
-cd /path/ke/directory; docker exec -it nama_container pm2 reload all
+cd /path/ke/directory; docker exec nama_container npm install
+cd /path/ke/directory; docker exec nama_container pm2 reload all
 ```
 
 untuk monitoring:
